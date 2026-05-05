@@ -42,7 +42,7 @@ export default function About() {
             className="mt-10 pt-10 border-t border-white/8"
           >
             <span className="font-mono text-[6rem] font-black leading-none text-white/5 select-none">
-              LK
+             Developer
             </span>
           </motion.div>
         </div>

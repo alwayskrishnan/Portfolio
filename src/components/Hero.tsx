@@ -31,7 +31,7 @@ function TickerRow({ reverse = false }: { reverse?: boolean }) {
   );
 }
 
-const words = ['LEELA', 'KRISHNA', 'GADDI'];
+const words = ['LEELA', 'KRISHNA'];
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -88,13 +88,13 @@ export default function Hero() {
           className="mt-10 flex flex-col md:flex-row md:items-end gap-8 md:gap-16"
         >
           <p className="max-w-lg text-white/50 text-base md:text-lg leading-relaxed">
-            Web Developer & UI Designer crafting responsive, performant websites —
+            Web Developer & UI Designer crafting responsive, performant websites
             from Figma to deployment.
           </p>
 
           {/* Stats */}
           <div className="flex gap-10">
-            {[['3+', 'Years Experience'], ['6+', 'Live Websites']].map(([num, label]) => (
+            {[['2+', 'Years Experience'], ['10+', 'Live Websites']].map(([num, label]) => (
               <div key={label} className="flex flex-col">
                 <span className="text-3xl md:text-4xl font-black text-white">{num}</span>
                 <span className="text-xs text-white/30 uppercase tracking-widest mt-1">{label}</span>
@@ -125,7 +125,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1.1 }}
-        className="mt-16 w-full"
+        className="mt-16 w-full hidden"
       >
         <TickerRow reverse={false} />
         <TickerRow reverse={true} />

@@ -1,16 +1,26 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+
+const WORDS = ['DESIGN', 'DEVELOP', 'DEPLOY'];
 
 const links = ['About', 'Work', 'Skills', 'Contact'];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setWordIndex((i) => (i + 1) % WORDS.length);
+    }, 2200);
+    return () => clearInterval(id);
   }, []);
 
   const scrollTo = (id: string) => {
@@ -34,7 +44,21 @@ export default function Navbar() {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="text-white font-bold text-xl tracking-tight hover:opacity-70 transition-opacity"
         >
-          LK<span className="text-white/40">.</span>
+          <span className="inline-block" style={{ minWidth: '4.5rem' }}>
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={wordIndex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="inline-block"
+              >
+                {WORDS[wordIndex]}
+              </motion.span>
+            </AnimatePresence>
+          </span>
+          <span className="text-white/40">.</span>
         </button>
 
         {/* Desktop links */}

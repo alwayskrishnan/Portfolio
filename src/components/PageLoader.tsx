@@ -26,7 +26,7 @@ export default function PageLoader() {
             className="text-center"
           >
             <div className="text-4xl font-black text-white tracking-tight">
-              LK<span className="text-white/20">.</span>
+              LEELA KRISHNA<span className="text-white/20">.</span>
             </div>
             <motion.div
               initial={{ width: 0 }}
