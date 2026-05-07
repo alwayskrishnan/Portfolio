@@ -68,3 +68,28 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* ── Creative Posters marquee ───────────────────────────────────────────── */
+@keyframes poster-scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes poster-scroll-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.poster-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+.poster-track--left {
+  animation: poster-scroll-left var(--poster-speed, 38s) linear infinite;
+}
+.poster-track--right {
+  animation: poster-scroll-right var(--poster-speed, 44s) linear infinite;
+}
+.poster-track--paused {
+  animation-play-state: paused;
+}

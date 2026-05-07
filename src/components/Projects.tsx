@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
-const ACCENT = '#0740aaff';
+const ACCENT = '#60a5fa';
 
 const standardProjects = [
   {
@@ -93,7 +93,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"
         style={{
-          boxShadow: `0 0 40px rgba(139,92,246,0.12), inset 0 0 0 1px rgba(139,92,246,0.2)`,
+          boxShadow: `0 0 40px rgba(96,165,250,0.12), inset 0 0 0 1px rgba(96,165,250,0.2)`,
         }}
       />
 
@@ -174,9 +174,9 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               key={tag}
               className="text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-full font-mono"
               style={{
-                background: 'rgba(139,92,246,0.1)',
+                background: 'rgba(96,165,250,0.1)',
                 color: ACCENT,
-                border: '1px solid rgba(139,92,246,0.25)',
+                border: '1px solid rgba(96,165,250,0.25)',
               }}
             >
               {tag}
@@ -190,12 +190,12 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           target="_blank"
           rel="noopener noreferrer"
           className="visit-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold w-fit transition-all duration-300"
-          style={{ border: `1px solid rgba(139,92,246,0.4)`, color: ACCENT }}
+          style={{ border: `1px solid rgba(96,165,250,0.4)`, color: ACCENT }}
           onMouseEnter={(e) => {
             const el = e.currentTarget;
             el.style.background = ACCENT;
             el.style.color = '#fff';
-            el.style.boxShadow = '0 0 22px rgba(139,92,246,0.5)';
+            el.style.boxShadow = '0 0 22px rgba(96,165,250,0.5)';
           }}
           onMouseLeave={(e) => {
             const el = e.currentTarget;
@@ -372,9 +372,9 @@ function BrowserCard() {
         <div
           className="shrink-0 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
           style={{
-            background: 'rgba(139,92,246,0.15)',
+            background: 'rgba(96,165,250,0.15)',
             color: ACCENT,
-            border: '1px solid rgba(139,92,246,0.25)',
+            border: '1px solid rgba(96,165,250,0.25)',
           }}
         >
           Portfolio
@@ -497,9 +497,9 @@ function BrowserCard() {
               key={tag}
               className="text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-full font-mono"
               style={{
-                background: 'rgba(139,92,246,0.1)',
+                background: 'rgba(96,165,250,0.1)',
                 color: ACCENT,
-                border: '1px solid rgba(139,92,246,0.25)',
+                border: '1px solid rgba(96,165,250,0.25)',
               }}
             >
               {tag}
@@ -517,7 +517,7 @@ function BrowserCard() {
               rel="noopener noreferrer"
               className="text-xs px-3 py-1.5 rounded-full font-medium transition-all duration-200"
               style={{
-                border: `1px solid rgba(139,92,246,0.4)`,
+                border: `1px solid rgba(96,165,250,0.4)`,
                 color: ACCENT,
               }}
               onMouseEnter={(e) => {
@@ -530,7 +530,7 @@ function BrowserCard() {
                 const el = e.currentTarget;
                 el.style.background = 'transparent';
                 el.style.color = ACCENT;
-                el.style.borderColor = 'rgba(139,92,246,0.4)';
+                el.style.borderColor = 'rgba(96,165,250,0.4)';
               }}
             >
               {site.name} ↗
