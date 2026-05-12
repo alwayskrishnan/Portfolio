@@ -28,7 +28,7 @@ export default function About() {
           >
             <span className="text-xs tracking-[0.3em] uppercase text-white/25 font-mono">01 — About</span>
             <h2 className="mt-4 text-[clamp(2.5rem,5vw,5rem)] font-black leading-[0.95] tracking-tight text-white uppercase">
-              ABOUT<br />ME.
+              ABOUT<br />ME
             </h2>
           </motion.div>
 
