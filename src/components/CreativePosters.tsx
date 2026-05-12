@@ -1,6 +1,20 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import imgJokerz          from '../assets/images/jokerz.jpg';
+import imgWebsite         from '../assets/images/website.png';
+import imgWebsite1        from '../assets/images/website1.jpg';
+import imgConglomerate    from '../assets/images/conglomerateit.jpg';
+import imgGeodisha        from '../assets/images/geodisha.jpg';
+import imgGeodishaOnePager from '../assets/images/geodisha-one-pager.jpg';
+import imgGeodishaPolitics from '../assets/images/geodisha-politics.png';
+import imgBTC             from '../assets/images/btc.jpg';
+import imgPost10          from '../assets/images/post-10.jpg';
+import imgPost14          from '../assets/images/post-14.png';
+import imgPost15          from '../assets/images/post-15.png';
+import imgPost31          from '../assets/images/post-31.png';
+import imgDesign2         from '../assets/images/design-2.png';
+
 // ── Types ──────────────────────────────────────────────────────────────────
 export interface PosterImage {
   id: number | string;
@@ -8,58 +22,21 @@ export interface PosterImage {
   alt: string;
 }
 
-// ── Default poster data (replace with your own images) ─────────────────────
+// ── Poster data ─────────────────────────────────────────────────────────────
 const DEFAULT_POSTERS: PosterImage[] = [
-  {
-    id: 1,
-    src: 'src/assets/images/jokerz.jpg',
-    alt: 'Fluid Abstract Art',
-  },
-  {
-    id: 2,
-    src: 'src/assets/images/website .png',
-    alt: 'Abstract Waves',
-  },
-  {
-    id: 3,
-    src: 'src/assets/images/conglomerateit.jpg',
-    alt: 'Neon Night',
-  },
-  {
-    id: 4,
-    src: 'src/assets/images/geodisha.jpg',
-    alt: 'Visual Composition',
-  },
-  {
-    id: 5,
-    src: 'src/assets/images/BTC.jpg',
-    alt: 'Light Study',
-  },
-  {
-    id: 6,
-    src: 'src/assets/images/post 15.png',
-    alt: 'Color Burst',
-  },
-  {
-    id: 7,
-    src: 'src/assets/images/post 14.png',
-    alt: 'Editorial Fashion',
-  },
-  {
-    id: 8,
-    src: 'src/assets/images/design 2.png',
-    alt: 'Digital Motion',
-  },
-  {
-    id: 9,
-    src: 'src/assets/images/post 31.png',
-    alt: 'Ink Explosion',
-  },
-  {
-    id: 10,
-    src: 'src/assets/images/Geodisha one pager.jpg',
-    alt: 'Minimal Form',
-  },
+  { id: 1,  src: imgJokerz,          alt: 'Jokerz Bakery'         },
+  { id: 2,  src: imgWebsite,         alt: 'Website Design'        },
+  { id: 3,  src: imgConglomerate,    alt: 'Conglomerate IT'       },
+  { id: 4,  src: imgGeodisha,        alt: 'Geodisha'              },
+  { id: 5,  src: imgBTC,             alt: 'Beta Trading Co.'      },
+  { id: 6,  src: imgPost15,          alt: 'Creative Post'         },
+  { id: 7,  src: imgPost14,          alt: 'Design Post'           },
+  { id: 8,  src: imgDesign2,         alt: 'Design Work'           },
+  { id: 9,  src: imgPost31,          alt: 'Social Post'           },
+  { id: 10, src: imgGeodishaOnePager,alt: 'Geodisha One Pager'    },
+  { id: 11, src: imgPost10,          alt: 'Campaign Post'         },
+  { id: 12, src: imgWebsite1,        alt: 'Website Showcase'      },
+  { id: 13, src: imgGeodishaPolitics,alt: 'Geodisha Politics'     },
 ];
 
 // ── PosterCard ─────────────────────────────────────────────────────────────

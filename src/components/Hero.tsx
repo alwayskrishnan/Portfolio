@@ -70,7 +70,7 @@ export default function Hero() {
             <div key={word} className="overflow-hidden">
               <motion.h1
                 initial={{ y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
+                animate={{y: 0, opacity: 1}}
                 transition={{ duration: 0.8, delay: 0.3 + wi * 0.12, ease: "easeOut" }}
                 className="text-[clamp(3rem,10vw,9rem)] font-black leading-[0.92] tracking-tight text-white uppercase"
               >
@@ -94,7 +94,7 @@ export default function Hero() {
 
           {/* Stats */}
           <div className="flex gap-10">
-            {[['2+', 'Years Experience'], ['10+', 'Live Websites']].map(([num, label]) => (
+            {[['3', 'Years Experience'], ['10+', 'Live Websites']].map(([num, label]) => (
               <div key={label} className="flex flex-col">
                 <span className="text-3xl md:text-4xl font-black text-white">{num}</span>
                 <span className="text-xs text-white/30 uppercase tracking-widest mt-1">{label}</span>
